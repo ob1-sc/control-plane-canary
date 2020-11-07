@@ -1,0 +1,10 @@
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*
+*.tfplan
+
+tmp*/*
+dump*/*
+state*/*
+
+*.pem

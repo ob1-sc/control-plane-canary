@@ -1,0 +1,7 @@
+environment_name = "cp"
+subscription_id  = ""
+tenant_id        = ""
+client_id        = ""
+client_secret    = ""
+location         = "West Europe"
+hosted_zone      = ""

@@ -1,0 +1,29 @@
+---
+jobs:
+  - name: job-hello-world
+    public: true
+    plan:
+      - task: hello-world
+        params:
+          VALUE_FROM_CREDHUB: ((test))
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source: {repository: busybox}
+          run:
+            path: sh
+            args:
+            - -c
+            - |
+              echo $VALUE_FROM_CREDHUB
+      - task: print-env
+        params:
+          VALUE_FROM_CREDHUB: ((test))
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source: {repository: busybox}
+          run:
+            path: env
